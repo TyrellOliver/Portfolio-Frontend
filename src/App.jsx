@@ -2,19 +2,27 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 //Pages
+import Home from "../src/Components/Pages/Home";
+import Index from "../src/Components/Pages/Index";
+import Show from "../src/Components/Pages/Show";
+import Edit from "../src/Components/Pages/Edit";
+import New from "../src/Components/Pages/New";
+import FourOFour from "../src/Components/Pages/FourOFour";
+
+import NavBar from "./Components/NavBar";
 
 function App() {
-
   return (
     <Router>
-      <Route>
-        <Routes path="/"  element={""}/>
-        <Routes path="/plants"  element={""}/>
-        <Routes path="/plants/:index"  element={""}/>
-        <Routes path="/plants/:index/edit"  element={""}/>
-        <Routes path="/plants/new"  element={""}/>
-        <Routes path="*"  element={""}/>
-      </Route>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/plants" element={<Index />} />
+        <Route path="/plants/:index" element={<Show />} />
+        <Route path="/plants/:index/edit" element={<Edit />} />
+        <Route path="/plants/new" element={<New />} />
+        <Route path="*" element={<FourOFour />} />
+      </Routes>
     </Router>
   );
 }
