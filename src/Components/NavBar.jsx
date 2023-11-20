@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
+import "./Styles/NavBar.css";
 
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <h1>
-        <Link to={"/plants"}>Botanic Bliss</Link>
-      </h1>
+      <Link to={"/plants"}>
+        <h1>Botanic Bliss</h1>
+      </Link>
       <h3>Sow, Grow, Glow!</h3>
-      <button>
-        <Link to={"/plants/new"}>Add New Plant</Link>
-      </button>
+      <Link to={"/plants/new"}>
+        <button>Add New Plant</button>
+      </Link>
     </nav>
   );
 }
