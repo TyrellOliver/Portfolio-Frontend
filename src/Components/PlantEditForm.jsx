@@ -1,7 +1,150 @@
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+
+const API = import.meta.env.VITE_API_URL;
+
 export default function PlantEditForm() {
+  let { index } = useParams();
+  let navigate = useNavigate();
+
+  const [editPlant, setEditPlant] = useState({
+    name: "",
+    price: "",
+    in_stock: true,
+    description: "",
+    moisture_needs: "",
+    safe_for_pets: false,
+    image_url: "",
+  });
+
+  const updatePlant = () => {
+    fetch(`${API}/plants/${index}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editPlant),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        navigate(`/plants/${index}`);
+      });
+  };
+
+  useEffect(() => {
+    fetch(`${API}/plants/${index}`)
+      .then((res) => res.json())
+      .then((res) => setEditPlant(res));
+  }, []);
+
+  const handleTextChange = (event) => {
+    setEditPlant({ ...editPlant, [event.target.id]: event.target.value });
+  };
+
+  const handleCheckboxChange = () => {
+    setEditPlant({ ...editPlant, safe_for_pets: !editPlant.safe_for_pets });
+  };
+
+  const handleRadioChange = (event) => {
+    setEditPlant({ ...editPlant, moisture_needs: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    updatePlant();
+  };
+
   return (
     <div className="plantEditForm">
-      <h2>Plant edit form</h2>
+      <h2>Plant Edit Form</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          id="name"
+          value={editPlant.name}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Name of Plant"
+          required
+        />
+        <br />
+
+        <label htmlFor="price">Price:</label>
+        <input
+          id="price"
+          value={editPlant.price}
+          type="number"
+          onChange={handleTextChange}
+          placeholder="0"
+          required
+        />
+        <br />
+
+        <label htmlFor="description">description:</label>
+        <input
+          id="description"
+          value={editPlant.description}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Description"
+          required
+        />
+        <br />
+
+        <label htmlFor="image_url">Image URL:</label>
+        <input
+          id="image_url"
+          value={editPlant.image_url}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Image of Plant"
+        />
+        <br />
+
+        <label htmlFor="moisture_needs">Watering Needs:</label>
+
+        <input
+          type="radio"
+          id="low_watering"
+          name="moisture_needs"
+          value={"Low Watering"}
+          onChange={handleRadioChange}
+        />
+        <label htmlFor="low_watering">Low Watering</label>
+        <input
+          type="radio"
+          id="moderate_watering"
+          name="moisture_needs"
+          value={"Moderate Watering"}
+          onChange={handleRadioChange}
+        />
+        <label htmlFor="moderate_watering">Moderate Watering</label>
+        <input
+          type="radio"
+          id="water_often"
+          name="moisture_needs"
+          value={"Water Often"}
+          onChange={handleRadioChange}
+        />
+        <label htmlFor="water_often">Water Often</label>
+        <br />
+
+        <label htmlFor="safe_for_pets">Pet Safe:</label>
+        <input
+          id="safe_for_pets"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={editPlant.safe_for_pets}
+        />
+        <br />
+        <br />
+
+        <button type="submit">Submit</button>
+        {console.log(editPlant)}
+      </form> <br />
+      <Link to={`/plants/${index}`}>
+        <button>Back</button>
+      </Link>
     </div>
   );
 }

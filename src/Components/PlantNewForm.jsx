@@ -146,10 +146,10 @@ export default function PlantNewForm() {
         {console.log(newPlant)}
         <br />
         <br />
+      </form>
         <Link to={`/plants`}>
           <button>Nevermind</button>
         </Link>
-      </form>
     </div>
   );
 }

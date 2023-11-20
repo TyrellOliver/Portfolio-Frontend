@@ -21,7 +21,7 @@ function App() {
         <Route path="/plants/:index" element={<Show />} />
         <Route path="/plants/:index/edit" element={<Edit />} />
         <Route path="/plants/new" element={<New />} />
-        {/* <Route path="*" element={<FourOFour />} /> */}
+        <Route path="*" element={<FourOFour />} />
       </Routes>
     </Router>
   );

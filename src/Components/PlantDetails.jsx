@@ -27,6 +27,18 @@ export default function PlantDetails() {
     fetchData();
   }, [index]);
 
+  const handleDelete = () => {
+    fetch(`${API}/plants/${index}`, {
+      method: "Delete",
+    }).then(() => navigate("/plants"));
+  };
+
+  const confirmDelete = () => {
+    if (window.confirm("Are you sure you want to delete this plant?")) {
+      handleDelete();
+    }
+  };
+
   return (
     <div className="plantDetails">
       <h2>Plant Details</h2>
@@ -43,6 +55,10 @@ export default function PlantDetails() {
       <Link to={`/plants`}>
         <button>Back</button>
       </Link>
+      <Link to={`/plants/${index}/edit`}>
+        <button>Edit</button>
+      </Link>
+      <button onClick={confirmDelete}>Delete</button>
     </div>
   );
 }
