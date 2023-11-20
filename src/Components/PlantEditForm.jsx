@@ -58,93 +58,108 @@ export default function PlantEditForm() {
     <div className="plantEditForm">
       <h2>Plant Edit Form</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          value={editPlant.name}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Name of Plant"
-          required
-        />
+        <div className="FormField">
+          <label htmlFor="name">Name:</label>
+          <input
+            id="name"
+            value={editPlant.name}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Name of Plant"
+            required
+          />
+        </div>
         <br />
 
-        <label htmlFor="price">Price:</label>
-        <input
-          id="price"
-          value={editPlant.price}
-          type="number"
-          onChange={handleTextChange}
-          placeholder="0"
-          required
-        />
+        <div className="FormField">
+          <label htmlFor="price">Price:</label>
+          <input
+            id="price"
+            value={editPlant.price}
+            type="number"
+            onChange={handleTextChange}
+            placeholder="0"
+            required
+          />
+        </div>
         <br />
 
-        <label htmlFor="description">description:</label>
-        <input
-          id="description"
-          value={editPlant.description}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Description"
-          required
-        />
+        <div className="FormField">
+          <label htmlFor="description">description:</label>
+          <input
+            id="description"
+            value={editPlant.description}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Description"
+            required
+          />
+        </div>
         <br />
 
-        <label htmlFor="image_url">Image URL:</label>
-        <input
-          id="image_url"
-          value={editPlant.image_url}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Image of Plant"
-        />
+        <div className="FormField">
+          <label htmlFor="image_url">Image URL:</label>
+          <input
+            id="image_url"
+            value={editPlant.image_url}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Image of Plant"
+          />
+        </div>
         <br />
 
-        <label htmlFor="moisture_needs">Watering Needs:</label>
-
-        <input
-          type="radio"
-          id="low_watering"
-          name="moisture_needs"
-          value={"Low Watering"}
-          onChange={handleRadioChange}
-        />
-        <label htmlFor="low_watering">Low Watering</label>
-        <input
-          type="radio"
-          id="moderate_watering"
-          name="moisture_needs"
-          value={"Moderate Watering"}
-          onChange={handleRadioChange}
-        />
-        <label htmlFor="moderate_watering">Moderate Watering</label>
-        <input
-          type="radio"
-          id="water_often"
-          name="moisture_needs"
-          value={"Water Often"}
-          onChange={handleRadioChange}
-        />
-        <label htmlFor="water_often">Water Often</label>
+        <div className="FormField">
+          <label htmlFor="moisture_needs">Watering Needs:</label> <br />
+          <label htmlFor="low_watering">Low Watering:</label>
+          <input
+            type="radio"
+            id="low_watering"
+            name="moisture_needs"
+            value={"Low Watering"}
+            onChange={handleRadioChange}
+          />
+          <label htmlFor="moderate_watering">Moderate Watering:</label>
+          <input
+            type="radio"
+            id="moderate_watering"
+            name="moisture_needs"
+            value={"Moderate Watering"}
+            onChange={handleRadioChange}
+          />
+          <label htmlFor="water_often">Water Often:</label>
+          <input
+            type="radio"
+            id="water_often"
+            name="moisture_needs"
+            value={"Water Often"}
+            onChange={handleRadioChange}
+          />
+        </div>
         <br />
 
-        <label htmlFor="safe_for_pets">Pet Safe:</label>
-        <input
-          id="safe_for_pets"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={editPlant.safe_for_pets}
-        />
-        <br />
+        <div className="FormField">
+          <label htmlFor="safe_for_pets">Pet Safe:</label>
+          <input
+            id="safe_for_pets"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={editPlant.safe_for_pets}
+          />
+        </div>
         <br />
 
-        <button type="submit">Submit</button>
-        {console.log(editPlant)}
-      </form> <br />
-      <Link to={`/plants/${index}`}>
-        <button>Back</button>
-      </Link>
+        <div className="submit-button">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <br />
+
+      <div className="back-button">
+        <Link to={`/plants/${index}`}>
+          <button>Back</button>
+        </Link>
+      </div>
     </div>
   );
 }

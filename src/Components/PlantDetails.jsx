@@ -17,7 +17,6 @@ export default function PlantDetails() {
           setPlant(res);
         });
     } catch (error) {
-      console.error(error);
       return error;
     }
   };
@@ -46,19 +45,23 @@ export default function PlantDetails() {
         <div className="plant-img">
           <img src={plant.image_url} alt={``} />
         </div>
-        <h2>{plant.name}</h2>
-        <h3>{plant.price}</h3>
-        <h3>{plant.in_stock ? "In Stock" : null}</h3>
-        <h3>{plant.safe_for_pets ? "🐶 Safe" : "Not Safe For 🐶"}</h3>
-        <h3>{plant.description}</h3>
+        <div className="plant-description">
+          <h2>{plant.name}</h2>
+          <h3>{plant.price}</h3>
+          <h3>{plant.in_stock ? "In Stock" : null}</h3>
+          <h3>{plant.safe_for_pets ? "🐶 Safe" : "Not Safe For 🐶"}</h3>
+          <h3>{plant.description}</h3>
+        </div>
       </div>
-      <Link to={`/plants`}>
-        <button>Back</button>
-      </Link>
-      <Link to={`/plants/${index}/edit`}>
-        <button>Edit</button>
-      </Link>
-      <button onClick={confirmDelete}>Delete</button>
+      <div className="buttons">
+        <Link to={`/plants`}>
+          <button>Back</button>
+        </Link>
+        <Link to={`/plants/${index}/edit`}>
+          <button>Edit</button>
+        </Link>
+        <button onClick={confirmDelete}>Delete</button>
+      </div>
     </div>
   );
 }
