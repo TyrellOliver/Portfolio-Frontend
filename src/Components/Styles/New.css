@@ -1,0 +1,72 @@
+/* Overall form container */
+/* 
+.new_form_container {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+   */
+/* Form fields */
+
+/* .FormField {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  } */
+
+/* Form labels */
+
+/* .FormField label {
+    font-weight: bold;
+  } */
+
+/* Form inputs */
+
+/* .FormField input,
+  .FormField textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  } */
+
+/* Radio buttons and checkboxes */
+
+/* .FormField input[type="radio"],
+  .FormField input[type="checkbox"] {
+    margin-right: 5px;
+  } */
+
+/* Submit button */
+
+/* .submit-button {
+    text-align: center;
+    margin-top: 10px;
+  } */
+
+/* .submit-button button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+.new_form_container {
+  border-radius: 5px;
+  padding: 20px;
+}

@@ -1,8 +1,41 @@
-# React + Vite
+# Botanic Bliss
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Botanic Bliss is a web application that provides users with a delightful experience of exploring a gallery of various plants. Users can not only view the existing collection of plants but also contribute to it by adding their own plants. Additionally, users have the ability to update and delete their plant entries.
 
-Currently, two official plugins are available:
+### Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **View Plant Gallery:** Explore a diverse collection of plants with detailed information and beautiful images.
+- **Add Plants:** Share your favorite plants with the community by adding new entries, complete with images and information.
+- **Update Plants:** Edit the details of your added plants to keep the information up-to-date.
+- **Delete Plants:** Remove plants from the gallery that are no longer relevant.
+
+## Getting Started
+
+To get started with Botanic Bliss, follow these steps:
+
+1. Clone the repository to your local machine:
+    - git clone https://github.com/TyrellOliver/Portfolio-Frontend.git
+
+2. Navigate to the project directory:
+    - cd Portfolio-Frontend
+
+3. Install dependencies:
+    - npm install
+
+4. Start the application:
+    - npm run dev
+
+## Future Functionality
+
+We are actively working on enhancing Botanic Bliss to provide more features and an improved user experience. Here's a glimpse of what's coming soon:
+
+- **Updated Home Page:** We are working on creating a home page with an intuitive layout and design
+- **Filtering:** Easily find plants based on spicific criteria , such as if it's safe for pets, or in stock, or by price
+
+## Deployment
+- [Netlify]()
+- [Render]()
+
+## GitHub
+- [Frontend](https://github.com/TyrellOliver/Portfolio-Frontend)
+- [Backend](https://github.com/TyrellOliver/Portfolio-Backend)

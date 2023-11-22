@@ -17,7 +17,7 @@ export default function Plant({ plant }) {
           <h2>{plant.name}</h2>
           <h3>{plant.price}</h3>
           <h3>{plant.in_stock ? "In Stock" : null}</h3>
-          <h3>{plant.safe_for_pets ? "🐶 Safe" : "Not Safe For 🐶"}</h3>
+          <h3>{plant.safe_for_pets ? "Pet Safe" : "Not Safe For Pets"}</h3>
           <h3>{plant.description}</h3>
         </div>
       </div>
