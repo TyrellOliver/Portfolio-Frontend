@@ -41,4 +41,4 @@ We are actively working on enhancing Botanic Bliss to provide more features and 
 - [Backend](https://github.com/TyrellOliver/Portfolio-Backend)
 
 ## Presentation Recording
-- [Recording]()
+- [Recording](https://drive.google.com/file/d/1Vx-aQU08Ic4emKeQ15mEPhxJ-0NOw6Wk/view?usp=drive_link)
