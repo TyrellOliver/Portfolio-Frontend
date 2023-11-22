@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 export default function Plant({ plant }) {
+  // const myStyle = {
+  //   color: "black"
+  // }
+  // const inStock = {
+  //   color: "black"
+  // }
   return (
     <Link to={`/plants/${plant.id}`}>
       <div className="plant_card">

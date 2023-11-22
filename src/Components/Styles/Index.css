@@ -1,0 +1,32 @@
+.plants-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plant_card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.plant_img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.plant_img img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.plant-card{
+  display: flex;
+}
+
+.plant_description{
+  color: black;
+}

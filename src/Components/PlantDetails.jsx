@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+
 const API = import.meta.env.VITE_API_URL;
 
 export default function PlantDetails() {
@@ -39,11 +40,11 @@ export default function PlantDetails() {
   };
 
   return (
-    <div className="plantDetails">
+    <div className="plant-details">
       <h2>Plant Details</h2>
       <div className="plant-card">
         <div className="plant-img">
-          <img src={plant.image_url} alt={``} />
+          <img src={plant.image_url} alt={`An image of ${plant.name}`} />
         </div>
         <div className="plant-description">
           <h2>{plant.name}</h2>
@@ -53,7 +54,7 @@ export default function PlantDetails() {
           <h3>{plant.description}</h3>
         </div>
       </div>
-      <div className="buttons">
+      <div className="plant-details-buttons">
         <Link to={`/plants`}>
           <button>Back</button>
         </Link>
