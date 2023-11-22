@@ -33,9 +33,12 @@ We are actively working on enhancing Botanic Bliss to provide more features and 
 - **Filtering:** Easily find plants based on spicific criteria , such as if it's safe for pets, or in stock, or by price
 
 ## Deployment
-- [Netlify]()
-- [Render]()
+- [Netlify](https://dazzling-faun-009e1e.netlify.app)
+- [Render](https://botanic-bliss-api.onrender.com)
 
 ## GitHub
 - [Frontend](https://github.com/TyrellOliver/Portfolio-Frontend)
 - [Backend](https://github.com/TyrellOliver/Portfolio-Backend)
+
+## Presentation Recording
+- [Recording]()
