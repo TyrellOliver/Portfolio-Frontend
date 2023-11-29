@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function Plant({ plant }) {
-  // const myStyle = {
-  //   color: "black"
-  // }
-  // const inStock = {
-  //   color: "black"
-  // }
+export default function Plant({ plant, isHoverable }) {
   return (
     <Link to={`/plants/${plant.id}`}>
-      <div className="plant_card">
-        <div className="plant_img">
+      <div className={isHoverable ? "plant_card_hover" : "plant_card"}>
+        <div className={isHoverable ? "plantImg" :"plant_img"}>
           <img src={plant.image_url} alt={`An image of ${plant.name}`} />
         </div>
         <div className="plant_description">

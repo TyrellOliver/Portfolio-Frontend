@@ -4,6 +4,12 @@
   gap: 20px;
 }
 
+.plants_container {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
+
 .plant_card {
   width: 100%;
   height: 100%;
@@ -11,6 +17,10 @@
   border-radius: 8px;
   overflow: hidden;
 }
+
+/* .plant_card_hover:hover{
+  background-color: blue;
+} */
 
 .plant_img {
   height: 200px;
@@ -23,10 +33,23 @@
   /* object-fit: cover; */
 }
 
-.plant-card{
+.plantImg {
+  border: 1px solid #d4d4d4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.plantImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.plant-card {
   display: flex;
 }
 
-.plant_description{
+.plant_description {
   color: black;
 }
